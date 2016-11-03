@@ -74,16 +74,16 @@ if __name__ == '__main__':
     # Code for Illinois Jobs Link Login - TODO: Fix login issues. (Try utf-8
     # encoding??)
 
-    soup = BeautifulSoup(session.get(SEARCH_URL).content, "html.parser")
-    inputs = soup.find_all('input')
-    token = ''
-    for t in inputs:
-        try:
-            if t['name'] == 'authenticity_token':
-                token = t['value']
-                break
-        except KeyError as e:
-            pass
+    # soup = BeautifulSoup(session.get(SEARCH_URL).content, "html.parser")
+    # inputs = soup.find_all('input')
+    # token = ''
+    # for t in inputs:
+    #     try:
+    #         if t['name'] == 'authenticity_token':
+    #             token = t['value']
+    #             break
+    #     except KeyError as e:
+    #         pass
     # print(soup.prettify().encode('utf-8'))
     # print(token)
 
@@ -99,7 +99,7 @@ if __name__ == '__main__':
 
     # print(r.content)
 
-    # scrape()
+    scrape()
 
     # Print our entries in the database
     for row in c.execute('SELECT * FROM listings'):
