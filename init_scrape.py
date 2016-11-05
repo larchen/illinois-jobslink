@@ -61,7 +61,7 @@ def login():
     # pulls login url from page, could change per session
     login = soup.find_all('form')[0]['action']
 
-    login data = dict(v_username=USER_NAME,
+    login_data = dict(v_username=USER_NAME,
                       v_password=PASSWORD,
                       FormName='Form0',
                       fromlogin=1,
