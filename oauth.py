@@ -28,7 +28,7 @@ def index():
 @app.route('/callback')
 def callback():
     flow = client.flow_from_clientsecrets(
-        'client_secret_911503641744-hn8pinmojgfi1n4poh2n8ssk48bu8idn.apps.googleusercontent.com.json',
+        'client_secret_969883539523-rd8ld0v6dtulo7hvmijao1pvakr947dn.apps.googleusercontent.com.json',
         scope='https://www.googleapis.com/auth/fusiontables',
         redirect_uri='http://localhost:5000/callback')
 
